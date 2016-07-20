@@ -2,11 +2,11 @@ require "./animal"
 require "./color"
 require "./breed"
 
-class Cat < Animal
+class Cat
   def initialize(color: nil, breed: nil, age: nil)
-    super(age: age)
     @color = Color.new(color)
     @breed = Breed.new(breed)
+    @animal = Animal.new(age)
   end
 
   def monochrome?
@@ -16,4 +16,9 @@ class Cat < Animal
   def dangerous?
     @breed == "Ocelot"
   end
+
+  def old?
+    @animal.old?
+  end
+
 end

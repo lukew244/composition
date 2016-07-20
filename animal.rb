@@ -1,6 +1,6 @@
 class Animal
-  def initialize(age:)
-    @age = age
+  def initialize(age = nil)
+    @age = age || 1
   end
 
   def old?
